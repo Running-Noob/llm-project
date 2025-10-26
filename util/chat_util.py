@@ -11,13 +11,14 @@ headers = {
     "Content-Type": "application/json"
 }
 
-"""
-聊天函数
-:param: model 模型名称
-:param: prompt 用户输入
-:return:
-"""
+
 def chat(model: str, prompt: str) -> any:
+    """
+    聊天函数
+    :param: model 模型名称
+    :param: prompt 用户输入
+    :return: 模型回答
+    """
     payload = {
         "model": model,
         "messages": [
@@ -32,12 +33,13 @@ def chat(model: str, prompt: str) -> any:
 
     return extract_content(response.json())
 
-"""
-解析模型的json回答内容
-:param: response 模型的json回答内容
-:return:
-"""
-def parse_json(response: str) -> dict:
+
+def parse_json(response: str):
+    """
+    解析模型的json回答内容
+    :param: response 模型的json回答内容
+    :return: 解析后的json结果
+    """
     try:
         # 使用正则表达式提取JSON部分
         json_match = re.search(r'```json\s*(.*?)\s*```', response, re.DOTALL)
@@ -46,12 +48,12 @@ def parse_json(response: str) -> dict:
         else:
             # 如果没有```json标记，尝试直接解析
             json_str = response.strip()
-        
+
         # 解析JSON
         result = json.loads(json_str)
-        
+
         return result
-        
+
     except Exception as e:
         print(f"解析失败: {e}")
         return None

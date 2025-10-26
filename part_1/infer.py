@@ -1,5 +1,6 @@
 from util.chat_util import chat, parse_json
 
+
 def chat_in_infer():
     # 确定模型
     model = "Qwen/Qwen2.5-VL-32B-Instruct"
@@ -32,7 +33,7 @@ def chat_in_infer():
     """
     二、信息提取
     """
-    
+
     # prompt = f"""
     # 从评论文本中识别以下项目：
     # - 评论者购买的物品
@@ -116,11 +117,12 @@ def chat_in_infer():
     """
 
     json_res = parse_json(chat(model=model, prompt=prompt))
-    
-    dict_res = {k : v for item in json_res for k, v in item.items()}
+
+    dict_res = {k: v for item in json_res for k, v in item.items()}
 
     if dict_res['美国航空航天局'] == 1:
         print("提醒: 关于美国航空航天局的新消息")
+
 
 if __name__ == "__main__":
     chat_in_infer()

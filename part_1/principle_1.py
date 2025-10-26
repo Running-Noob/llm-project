@@ -1,5 +1,6 @@
 from util.chat_util import chat
 
+
 def chat_in_principle_1():
     # 确定模型
     model = "Qwen/Qwen2.5-VL-32B-Instruct"
@@ -76,6 +77,7 @@ def chat_in_principle_1():
     """
 
     print(chat(model=model, prompt=prompt))
+
 
 if __name__ == "__main__":
     chat_in_principle_1()
