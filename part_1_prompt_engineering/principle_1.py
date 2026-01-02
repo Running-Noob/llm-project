@@ -1,10 +1,10 @@
-from util.chat_util import chat
+from utils.chat_util import chat
+
+# 确定模型
+model = "Qwen/Qwen3-30B-A3B-Instruct-2507"
 
 
 def chat_in_principle_1():
-    # 确定模型
-    model = "Qwen/Qwen2.5-VL-32B-Instruct"
-
     """
     原则一 1. 使用分隔符清晰地表示输入的不同部分
     """

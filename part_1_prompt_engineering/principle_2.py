@@ -1,10 +1,10 @@
-from util.chat_util import chat
+from utils.chat_util import chat
+
+# 确定模型
+model = "Qwen/Qwen3-30B-A3B-Instruct-2507"
 
 
 def chat_in_principle_2():
-    # 确定模型
-    model = "Qwen/Qwen2.5-VL-32B-Instruct"
-
     """
     原则二 1. 指定完成任务所需的步骤
     """

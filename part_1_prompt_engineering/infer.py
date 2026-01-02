@@ -1,10 +1,12 @@
-from util.chat_util import chat, parse_json
+from utils.response_util import parse_json
+from utils.chat_util import chat
+
+
+# 确定模型
+model = "Qwen/Qwen3-30B-A3B-Instruct-2507"
 
 
 def chat_in_infer():
-    # 确定模型
-    model = "Qwen/Qwen2.5-VL-32B-Instruct"
-
     lamp_review = """
     我需要一盏漂亮的卧室灯，这款灯具有额外的储物功能，价格也不算太高。\
     我很快就收到了它。在运输过程中，我们的灯绳断了，但是公司很乐意寄送了一个新的。\

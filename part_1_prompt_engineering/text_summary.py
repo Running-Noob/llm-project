@@ -1,10 +1,10 @@
-from util.chat_util import chat
+from utils.chat_util import chat
+
+# 确定模型
+model = "Qwen/Qwen3-30B-A3B-Instruct-2507"
 
 
 def chat_in_text_summary():
-    # 确定模型
-    model = "Qwen/Qwen2.5-VL-32B-Instruct"
-
     prod_comment = """
     这个熊猫公仔是我给女儿的生日礼物，她很喜欢，去哪都带着。
     公仔很软，超级可爱，面部表情也很和善。但是相比于价钱来说，
