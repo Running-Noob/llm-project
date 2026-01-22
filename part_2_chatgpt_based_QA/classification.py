@@ -1,4 +1,4 @@
-from utils.chat_util import chat, chat_with_system_prompt
+from utils.chat_util import chat
 from utils.config_util import prompt_config
 
 # 确定模型
@@ -43,7 +43,7 @@ def classification():
     user_message = f"""\
     我希望你删除我的个人资料和所有用户数据。"""
 
-    print(chat_with_system_prompt(model, system_message, user_message))
+    print(chat(model, user_message, system_message))
 
 
 if __name__ == "__main__":

@@ -1,4 +1,6 @@
-from utils.chat_util import chat
+import asyncio
+
+from utils.chat_util import chat, chat_streamly
 
 # 确定模型
 model = "Qwen/Qwen3-30B-A3B-Instruct-2507"
@@ -76,7 +78,9 @@ def chat_in_principle_1():
     <孩子>: 请教我何为韧性。
     """
 
-    print(chat(model=model, prompt=prompt))
+    generator = chat_streamly(model=model, prompt=prompt)
+    for content in generator:
+        print(content, end='')
 
 
 if __name__ == "__main__":
