@@ -1,7 +1,7 @@
 from openai import OpenAI
 
 from utils.env_util import get_api_key, get_url
-from utils.config_util import prompt_config
+from utils.config_util import prompt_config_dict
 
 # 模型相关配置
 url = get_url()
@@ -13,9 +13,9 @@ client = OpenAI(
 )
 
 # 分隔符
-delimiter = prompt_config.get("delimiter", "####")
+delimiter = prompt_config_dict.get("delimiter", "####")
 # 默认的系统提示词
-_system_prompt = prompt_config.get("system_prompt", "")
+_system_prompt = prompt_config_dict.get("system_prompt", "")
 
 
 def chat(model: str, prompt: str, system_prompt: str = _system_prompt):
