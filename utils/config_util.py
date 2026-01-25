@@ -15,3 +15,12 @@ def load_yaml_config(config_path: str):
 
 
 prompt_config = load_yaml_config(os.path.join(config_parent_path, "prompt_config.yaml"))
+
+prompt_config_dict = {
+    "system_prompt": prompt_config["system_prompt"],
+    "travel_agent_prompt": prompt_config["travel_agent_prompt"],
+    "delimiter": prompt_config["delimiter"]
+}
+
+if __name__ == "__main__":
+    print(prompt_config_dict)
