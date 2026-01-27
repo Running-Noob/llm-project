@@ -1,4 +1,3 @@
-import os
 import requests
 from tavily import TavilyClient
 from utils.env_util import *

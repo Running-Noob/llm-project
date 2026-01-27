@@ -19,7 +19,10 @@ prompt_config = load_yaml_config(os.path.join(config_parent_path, "prompt_config
 prompt_config_dict = {
     "system_prompt": prompt_config["system_prompt"],
     "travel_agent_prompt": prompt_config["travel_agent_prompt"],
-    "delimiter": prompt_config["delimiter"]
+    "delimiter": prompt_config["delimiter"],
+    "react_prompt_template": prompt_config["react_prompt_template"],
+    "planner_prompt_template": prompt_config["planner_prompt_template"],
+    "executor_prompt_template": prompt_config["executor_prompt_template"]
 }
 
 if __name__ == "__main__":
